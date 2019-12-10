@@ -1,77 +1,49 @@
-# https://github.com/github/gitignore
+# Root .htaccess
+/.htaccess
 
-# build - files generate with tools for static PHP code analyses
-build
- 
-## generic files to ignore
-*~
-*.lock
-*.DS_Store
-*.swp
-*.out
+# php-cs-fixer cache
+/.php_cs.cache
 
-##
-# composer 
-##
-composer.phar
-#composer.lock
+# dist directory
+/dist/
 
-##
-# components, libraries, etc
-##
-vendor
+# Composer vendor directory
+/vendor/
 
-##
-# Symfon2 - https://github.com/github/gitignore/blob/master/Symfony2.gitignore
-##
+# Composer lockfile
+/composer.lock
 
-# Bootstrap
-app/bootstrap*
+# Config files
+/db.ini
+/application/config/config.ini
+/application/tests/config.ini
 
-# Symfony directories
-vendor/*
-*/logs/*
-*/cache/*
-web/uploads/*
-web/bundles/*
+# Log files
+/application/logs/errors.log
+/application/logs/processes.log
+/application/tests/log.xml
 
-# Configuration files
-app/config/parameters.ini
-app/config/parameters.yml
+# Test files
+/application/tests/_files/temp/
 
-##
-# Netbeans
-##
-nbproject
+# Plugins and themes
+#/plugins/
+#/themes/
 
+# Files
+/files/original/*
+/files/fullsize/*
+/files/square_thumbnails/*
+/files/theme_uploads/*
+/files/thumbnails/*
 
-##
-# Eclipse - https://github.com/github/gitignore/blob/master/Global/Eclipse.gitignore
-##
+# For macs
+.DS_Store
 
-*.pydevproject
-.project
-.metadata
-bin/**
-tmp/**
-tmp/**/*
-*.tmp
-*.bak
-*.swp
-*~.nib
-local.properties
-.classpath
-.settings/
-.loadpath
+# For VIM
+.*.sw*
 
-# External tool builders
-.externalToolBuilders/
-
-# Locally stored "Eclipse launch configurations"
-*.launch
-
-# CDT-specific
-.cproject
-
-# PDT-specific
+# For Eclipse
 .buildpath
+.project
+.settings/
