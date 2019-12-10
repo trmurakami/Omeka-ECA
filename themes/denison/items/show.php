@@ -21,13 +21,6 @@
   $citation = metadata('item', 'citation', array('no_escape' => true));
   $collection = link_to_collection_for_item();
   $outputFormat = output_format_list(false, '');
-  $length = metadata('item', array('Item Type Metadata', 'Duration'));
-  $descrizione = metadata('item', array('Item Type Metadata', 'Descrizione'));
-  $audience = metadata('item', array('Item Type Metadata', 'Audience'));
-  $education = metadata('item', array('Item Type Metadata', 'Education Level'));
-  $subtitle = metadata('item', array('Item Type Metadata', 'Subtitle Language'));
-  $videoembed = metadata('item', array('Item Type Metadata', 'Embed Code'));
-  $grammarTopics = metadata('item', array('Item Type Metadata', 'Grammar Topics'));
 
   function showItemDescriptionTag($tagName, $tagVal) {
     echo __('<div class="item-description-tag">');
@@ -42,22 +35,17 @@
 ?>
 <div class="container item">
   <div class="section-header col-md-8 col-md-offset-2">
-    <small>-VIDEO-</small>
+    <small>-OBRA-</small>
     <h1><?php echo $title ?></h1>
   </div><!-- end of section-header -->
 
   <article class="col-md-12">
     <div class="col-md-8 col-md-offset-2">
       <div class="article-content">
-        <p><?php echo $videoembed; ?></p>       
-        <b>Description</b>
+        <b>Descrição</b>
         <p><?php echo $description; ?></p>
-        <b>Descrizione</b>
-        <p><?php echo $descrizione; ?></p>
-        <b>Source</b>
+        <b>Fonte</b>
         <p><?php echo $source; ?></p>
-        <b>Grammar Topics</b>
-        <p><?php echo $grammarTopics; ?></p>
         <b>Tags</b>
         <div id="tags-list"><?php echo $tags; ?></div>
       </div><!-- end of article-content -->
@@ -82,21 +70,21 @@
   <div class="item-description col-lg-12">
     <div class="col-lg-3 col-md-3 col-sm-6 col-lg-offset-2">
       <?php 
-        showItemDescriptionTag('TITLE', $title); 
+        showItemDescriptionTag('TÍTULO', $title); 
       ?>
     </div>
     
     <div class="col-lg-3 col-md-3 col-sm-6">
       <?php 
-        showItemDescriptionTag('AUDIENCE', $audience); 
-        showItemDescriptionTag('EDUCATION LEVEL', $education);
+        //showItemDescriptionTag('AUDIENCE', $audience); 
+        //showItemDescriptionTag('EDUCATION LEVEL', $education);
       ?>
     </div>
 
     <div class="col-lg-3 col-md-3 col-sm-6">
       <?php 
-        showItemDescriptionTag('LANGUAGE', $language);
-        showItemDescriptionTag('SUBTITLES', $subtitle); 
+        //showItemDescriptionTag('LANGUAGE', $language);
+        //showItemDescriptionTag('SUBTITLES', $subtitle); 
       ?>
     </div>
     

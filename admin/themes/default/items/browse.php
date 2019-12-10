@@ -16,7 +16,7 @@ echo item_search_filters();
     <?php if (is_allowed('Items', 'add')): ?>
     <a href="<?php echo html_escape(url('items/add')); ?>" class="add button small green"><?php echo __('Add an Item'); ?></a>
     <?php endif; ?>
-    <?php echo link_to_item_search(__('Search Items'), array('class' => 'small blue advanced-search-link button')); ?>
+    <?php echo link_to_item_search(__('Pesquisar obras'), array('class' => 'small blue advanced-search-link button')); ?>
     <?php echo common('quick-filters', array(), 'items'); ?>
 
     <form action="<?php echo html_escape(url('items/batch-edit')); ?>" method="post" accept-charset="utf-8">
@@ -141,7 +141,7 @@ echo item_search_filters();
     <?php if (is_allowed('Items', 'add')): ?>
     <a href="<?php echo html_escape(url('items/add')); ?>" class="add button small green"><?php echo __('Add an Item'); ?></a>
     <?php endif; ?>
-    <?php echo link_to_item_search(__('Search Items'), array('class' => 'small blue advanced-search-link button')); ?>
+    <?php echo link_to_item_search(__('Pesquisar obras'), array('class' => 'small blue advanced-search-link button')); ?>
     <?php echo common('quick-filters', array(), 'items'); ?>
 
 

@@ -34,7 +34,7 @@
 
 <div class="container collection">
   <div class="section-header col-md-8 col-md-offset-2">
-    <small>-COLLECTION-</small>
+    <small>-COLEÇÃO-</small>
     <h1><?php echo $title ?></h1>
   </div><!-- end of section-header -->
   
