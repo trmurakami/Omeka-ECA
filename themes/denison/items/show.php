@@ -22,12 +22,12 @@
   $collection = link_to_collection_for_item();
   $outputFormat = output_format_list(false, '');
   $length = metadata('item', array('Item Type Metadata', 'Duration'));
-  $descrizione = metadata('item', array('Item Type Metadata', 'Descrizione'));
-  $audience = metadata('item', array('Item Type Metadata', 'Audience'));
-  $education = metadata('item', array('Item Type Metadata', 'Education Level'));
-  $subtitle = metadata('item', array('Item Type Metadata', 'Subtitle Language'));
-  $videoembed = metadata('item', array('Item Type Metadata', 'Embed Code'));
-  $grammarTopics = metadata('item', array('Item Type Metadata', 'Grammar Topics'));
+  #$descrizione = metadata('item', array('Item Type Metadata', 'Description'));
+  #$audience = metadata('item', array('Item Type Metadata', 'Audience'));
+  #$education = metadata('item', array('Item Type Metadata', 'Education Level'));
+  #$subtitle = metadata('item', array('Item Type Metadata', 'Subtitle Language'));
+  #$videoembed = metadata('item', array('Item Type Metadata', 'Embed Code'));
+  #$grammarTopics = metadata('item', array('Item Type Metadata', 'Grammar Topics'));
 
   function showItemDescriptionTag($tagName, $tagVal) {
     echo __('<div class="item-description-tag">');
@@ -104,3 +104,5 @@
 </div><!-- end of item container -->
 
 <?php echo foot(); ?>
+
+
