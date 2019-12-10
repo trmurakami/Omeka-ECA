@@ -15,7 +15,7 @@
     <button class="expand-advanced-search closed">
       <span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span>
       <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
-      ADVANCED SEARCH
+      BUSCA AVANÇADA
     </button>
     <div class="section-header col-md-10 col-md-offset-1">
       <small>-NAVEGAÇÃO-</small>
