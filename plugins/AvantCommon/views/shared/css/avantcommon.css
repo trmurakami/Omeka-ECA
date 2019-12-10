@@ -1,0 +1,229 @@
+:root {
+    --preview-link-color: #666;
+    --preview-link-hover-color: #aaa;
+}
+
+.item-preview-identifier {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.document-icon,
+.document-icon-thumb,
+.pdf-icon,
+.pdf-icon-thumb {
+    position: relative;
+    display: inline-block;
+}
+
+.document-icon::before,
+.document-icon-thumb::before,
+.pdf-icon::before,
+.pdf-icon-thumb::before {
+    font-family: "FontAwesome";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate( -50%, -50% );
+}
+
+.document-icon::before,
+.document-icon-thumb::before {
+    font-size: 48px;
+    content: "\f15c";
+    color: rgba(0, 85, 150, 0.70);
+}
+
+.document-icon-thumb::before {
+    font-size: 24px;
+}
+
+.document-icon:hover::before,
+.document-icon-thumb:hover::before {
+    color: rgba(0, 85, 150, 0.90);
+}
+
+.pdf-icon::before,
+.pdf-icon-thumb::before {
+    font-size: 48px;
+    content: "\f1c1";
+    color: rgba(150, 0, 0, .70);
+}
+
+.pdf-icon-thumb::before {
+    font-size: 24px;
+}
+
+.pdf-icon:hover::before,
+.pdf-icon-thumb:hover::before {
+    color: rgba(150, 0, 0, .90);
+}
+
+.action-button {
+    padding: 3px 5px 3px 5px;
+    margin-bottom: 6px;
+}
+
+.item-preview {
+    list-style-type:none;
+    margin-left:12px;
+    padding-left:0;
+}
+
+.item-preview a {
+    font-family: "Roboto Condensed",sans-serif;
+}
+
+.item-preview a:link,
+.item-preview a:visited {
+    color: var(--preview-link-color);
+    text-decoration: none;
+}
+
+.item-preview a:hover {
+    color: var(--preview-link-hover-color);
+}
+
+.item-preview .element-text {
+    line-height: 18px;
+    margin:4px 0;
+    padding-left: 6px;
+    padding-bottom: 6px;
+}
+
+.item-preview .item-img {
+    margin-top: 2px;
+    max-height:165px;
+    vertical-align:middle;
+    width:165px;
+}
+
+.item-preview .item-img img {
+    background: #fff;
+    border: 1px solid #ccc;
+   	box-shadow: 4px 4px 6px 0 rgba(0,0,0,0.25);
+    box-sizing:border-box;
+    max-height: 155px;
+    max-width: 100%;
+    padding: 2px;
+}
+
+.item-preview.cover-image img,
+.item-preview.cover-image .item-img {
+    width: auto;
+    max-height: none;
+}
+
+.item-preview li {
+    width:165px;
+    display:inline-block;
+    vertical-align:top;
+    margin:0 18px 12px 0;
+}
+
+.private-element {
+    color: #aaa;
+    font-style: italic;
+}
+
+.shared-item-link:link,
+.shared-item-link:visited {
+    font-size: 16px;
+    font-style: normal;
+    align-items: center;
+    background-color: #1a66aa;
+    border-radius: 2px;
+    color: #fff;
+    display: inline-flex;
+    font-weight: 600;
+    justify-content: center;
+    padding: .75rem 0;
+    text-decoration: none;
+    width: 98%;
+}
+
+.shared-item-link:hover,
+.shared-item-link:visited:hover {
+    background-color: #076f0c;
+    text-decoration: none;
+}
+
+.shared-item-contributor {
+    font-size: 16px;
+    font-style: italic;
+    color: #777;
+    margin: 6px 0 4px 0;
+}
+
+.shared-item-error {
+    font-size: 16px;
+    font-weight: bold;
+    color: #777;
+}
+
+.shared-item-contributor div {
+    margin-top: 8px;
+}
+
+.lightbox-image-link::before {
+    color: #a6c4e3;
+    content: "\f002";
+    font-family: "FontAwesome";
+    font-size: 16px;
+    float: left;
+    margin-right: 8px;
+}
+
+/* Adjust for width of magnifying glass icon on lightbox-image-link so both title and "View this Item" link are centered. */
+div.mfp-title div span {
+    padding-left:24px;
+}
+
+/* Magnific popup */
+.mfp-close {
+    color: #b50000 !important;
+    font-size:48px !important;
+}
+
+.mfp-close,
+.mfp-close:hover,
+.mfp-arrow,
+.mfp-arrow:hover {
+    background: transparent !important;
+    box-shadow: none;
+}
+
+.mfp-bottom-bar {
+    padding: 8px;
+    margin-top: -67px;
+    background-color: white;
+}
+
+.mfp-counter {
+    color: #666;
+    font-size: 100%;
+    top: 8px;
+    right: 8px;
+}
+
+.mfp-title {
+    color: #999;
+    font-weight: bold;
+    text-align: center;
+    line-height: 20px;
+    padding-right: 60px;
+}
+
+.mfp-title .lightbox-link {
+    color: #000;
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+.mfp-title a:hover {
+    color: #666;
+}
+
+img.mfp-img {
+    padding: 40px 0 68px;
+}
