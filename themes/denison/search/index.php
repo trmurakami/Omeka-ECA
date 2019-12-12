@@ -9,7 +9,7 @@
 
 <div class="container">
   <div class="section-header col-md-10 col-md-offset-1">
-    <small>-SEARCH-</small>
+    <small>-RESULTADOS DA BUSCA-</small>
     <h1><?php echo $pageTitle; ?></h1>
   </div>
 

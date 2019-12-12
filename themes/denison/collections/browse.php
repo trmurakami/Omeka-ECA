@@ -6,8 +6,8 @@
 <div class="container">
   
   <div class="section-header col-md-10 col-md-offset-1">
-    <small>-NAVEGAÇÃO-</small>
-    <h1>Coleções <?php echo __('(%s total)', $total_results); ?></h1>
+    <!-- <small>-NAVEGAÇÃO-</small> -->
+    <h1>Coleções <?php echo __('(%s)', $total_results); ?></h1>
   </div>
   
   <div class="sort-links col-md-8 col-md-offset-2">

@@ -28,9 +28,10 @@
 						<nav>
 							<ul>
 								<li><a href="#about">Sobre</a></li>
-								<li><a href="items/browse">Itens</a></li>
+								<!-- <li><a href="items/browse">Itens</a></li> -->
 								<li><a href="collections/browse">Coleções</a></li>
-								<li><a href="iiif-items/tree">Catálogo</a></li>                    
+								<!-- <li><a href="iiif-items/tree">Catálogo</a></li> -->
+								<li><a href="#search">Buscar</a></li>                    
 							</ul>
 						</nav>
 					</header>
@@ -45,12 +46,18 @@
 								<p>A Biblioteca Digital da Produção Artística da ECA/USP tem como objetivo reunir imagens das obras produzidas pelos artistas ligados à Escola, destacando as que foram apresentadas como trabalhos acadêmicos de graduação, mestrado e doutorado. O registro e a divulgação dessa produção vem atender a uma demanda da própria comunidade, que deseja ter acesso às imagens de trabalhos criados pelos artistas da casa, e à necessidade institucional de criar uma ferramenta adequada ao registro e divulgação da produção artística que se expressa, fundamentalmente, por imagens.</p><p>Esperamos com este projeto valorizar a produção artística, democratizar o acesso e aumentar a visibilidade dos jovens artistas formados pela ECA.</p>
 							</article>
 
-						<!-- Work -->
-							<article id="work">
-								<h2 class="major">Work</h2>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
+						<!-- Search -->
+							<article id="search">
+								<h2 class="major">Buscar</h2>								
+								<form method="get" action="search">
+										<div class="field">
+											<label for="query">Termo de busca</label>
+											<input type="text" name="query" id="query" value="" placeholder="Informe o termo de busca" />
+										</div>
+										<ul class="actions">
+											<li><input type="submit" value="Buscar" class="special" /></li>
+										</ul>
+									</form>								
 							</article>
 
 						<!-- About -->

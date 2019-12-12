@@ -18,7 +18,7 @@
       BUSCA AVANÇADA
     </button>
     <div class="section-header col-md-10 col-md-offset-1">
-      <small>-NAVEGAÇÃO-</small>
+      <!-- <small>-NAVEGAÇÃO-</small> -->
       <h1>Obras <?php echo __('(%s total)', $total_results); ?></h1>
     </div>
 
