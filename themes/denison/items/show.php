@@ -2,7 +2,7 @@
 
 <?php
   /* I can remove data here by commenting out. Also need to add in a few fields.*/
-  $title = metadata('item', array('Dublin Core', 'Title'));
+  $title = metadata('item', array('Dublin Core', 'Title'));  
   $subject = metadata('item', array('Dublin Core', 'Subject'));
   $description = metadata('item', array('Dublin Core', 'Description'));
   $creators = metadata('item', array('Dublin Core', 'Creator'));
@@ -22,6 +22,17 @@
   $collection = link_to_collection_for_item();
   $outputFormat = output_format_list(false, '');
 
+  // VRA CORE
+
+  $agente = metadata('item', array('VRA Core', 'Agente'));
+  $medidas = metadata('item', array('VRA Core', 'Medidas'));
+  $contextoCultural = metadata('item', array('VRA Core', 'Contexto Cultural'));
+  $estiloOuPeriodo = metadata('item', array('VRA Core', 'Estilo ou Período'));
+  $localizacao = metadata('item', array('VRA Core', 'Localização'));
+  $descricao = metadata('item', array('VRA Core', 'Descrição'));
+  $textref = metadata('item', array('VRA Core', 'Textref'));
+  $assunto = metadata('item', array('VRA Core', 'Subject'));
+
   function showItemDescriptionTag($tagName, $tagVal) {
     echo __('<div class="item-description-tag">');
     echo __('  <h1>'.$tagName.'</h1>');
@@ -39,29 +50,13 @@
     <h1><?php echo $title ?></h1>
   </div><!-- end of section-header -->
 
-  <article class="col-md-12">
-    <div class="col-md-8 col-md-offset-2">
-      <div class="article-content">
-      <!--
-        <b>Descrição</b>
-        <p>< ?php echo $description; ?></p>
-        <b>Fonte</b>
-        <p>< ?php echo $source; ?></p>
-        <b>Tags</b>
-        <div id="tags-list">< ?php echo $tags; ?></div>
-      </div>
-      -->
-      <!-- end of article-content -->
-    </div>
-  </article>
-      
   <?php 
     if (get_theme_option('Item FileGallery') == 0 && metadata('item', 'has files')) {
       if (metadata('item', 'file_count') > 1) {
         echo __('<div class="multi-item-files col-lg-8 col-lg-offset-2 col-md-12">');
         echo files_for_item(array('imageSize' => 'square_thumbnail'), array('class' => 'item-file col-md-6'));
       } else {
-        echo __('<div class="single-item-files col-lg-8 col-lg-offset-2 col-md-12">');
+        echo __('<div class="single-item-files col-lg-12 col-md-12">');
         echo files_for_item(array('imageSize' => 'fullsize'));
       }
       echo __('</div><!-- end of item-files -->'); 
@@ -69,33 +64,67 @@
   
   ?>
 
-  <div class="item-description col-lg-12">
+  <div class="item-description col-lg-12">  
     <div class="col-lg-3 col-md-3 col-sm-6 col-lg-offset-2">
       <?php 
-        showItemDescriptionTag('TÍTULO', $title); 
+        showItemDescriptionTag('TÍTULO', $title);
+        showItemDescriptionTag('AUTOR', $agente);
+        showItemDescriptionTag('DESCRIÇÃO', $descricao);
+        showItemDescriptionTag('TEXTO DE REFERÊNCIA', $textref);
       ?>
     </div>
     
     <div class="col-lg-3 col-md-3 col-sm-6">
       <?php 
-        //showItemDescriptionTag('AUDIENCE', $audience); 
-        //showItemDescriptionTag('EDUCATION LEVEL', $education);
+        showItemDescriptionTag('CONTEXTO CULTURAL', $contextoCultural);
+        showItemDescriptionTag('ESTILO OU PERÍODO', $estiloOuPeriodo);
+        showItemDescriptionTag('ASSUNTOS', $assunto);
       ?>
     </div>
 
     <div class="col-lg-3 col-md-3 col-sm-6">
       <?php 
-        //showItemDescriptionTag('LANGUAGE', $language);
-        //showItemDescriptionTag('SUBTITLES', $subtitle); 
-      ?>
-    </div>
+        showItemDescriptionTag('MEDIDAS', $medidas);
+        showItemDescriptionTag('LOCALIZAÇÃO', $localizacao);
+      ?>  
+    </div>  
     
-  </div><!-- end of item-description -->  
+  </div>
 
-  <div class="flex">
-  <!-- The following returns all of the files associated with an item. -->
+  <div class="col-lg-12">  
+    <!-- The following prints a citation for this item. -->
+    <div id="item-citation" class="element">
+        <h3><?php echo __('Citation'); ?></h3>
+        <div class="element-text"><?php echo metadata('item', 'citation', array('no_escape' => true)); ?></div>
+    </div>
 
-    <div class="item-metadata">
+    <?php if (metadata('item', 'Collection Name')): ?>
+      <div id="collection" class="element">
+          <h3><?php echo __('Collection'); ?></h3>
+          <div class="element-text"><p><?php echo link_to_collection_for_item(); ?></p></div>
+      </div>
+    <?php endif; ?>
+
+    <!-- The following prints a list of all tags associated with the item -->
+    <?php if (metadata('item', 'has tags')): ?>
+      <div id="item-tags" class="element">
+          <h3><?php echo __('Tags'); ?></h3>
+          <div class="element-text"><?php echo tag_string('item'); ?></div>
+      </div>
+    <?php endif;?>
+
+    <!--
+    <div id="item-output-formats" class="element">
+        <h3><?php //echo __('Output Formats'); ?></h3>
+        <div class="element-text"><?php //echo output_format_list(); ?></div>
+    </div>
+    -->
+                  
+
+
+  </div>
+  
+  <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
         <!--
         <nav>
           <ul class="item-pagination navigation">
@@ -106,40 +135,13 @@
         -->
         
         
-        <div class="item-metadata-content">      
-      
-          <?php if (metadata('item', 'Collection Name')): ?>
-          <div id="collection" class="element">
-              <h3><?php echo __('Collection'); ?></h3>
-              <div class="element-text"><p><?php echo link_to_collection_for_item(); ?></p></div>
-          </div>
-          <?php endif; ?>
+        <div class="item-metadata-content"> 
         
-          <!-- The following prints a list of all tags associated with the item -->
-          <?php if (metadata('item', 'has tags')): ?>
-          <div id="item-tags" class="element">
-              <h3><?php echo __('Tags'); ?></h3>
-              <div class="element-text"><?php echo tag_string('item'); ?></div>
-          </div>
-          <?php endif;?>
-      
-          <!-- The following prints a citation for this item. -->
-          <div id="item-citation" class="element">
-              <h3><?php echo __('Citation'); ?></h3>
-              <div class="element-text"><?php echo metadata('item', 'citation', array('no_escape' => true)); ?></div>
-          </div>
+
         
-          <!--
-          <div id="item-output-formats" class="element">
-              <h3>< ?php echo __('Output Formats'); ?></h3>
-              <div class="element-text">< ?php echo output_format_list(); ?></div>
-          </div>
-          -->
-        
-          <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
+          
         </div>
-    </div>
-  </div>  
+
   
 
 
