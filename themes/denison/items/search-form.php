@@ -96,7 +96,7 @@
               </div>
           <?php endforeach; ?>
         </div>
-        <button type="button" class="add_search">Add a Field</button>
+        <button type="button" class="add_search">Adicionar um campo</button>
       </div>
     </div>
 
