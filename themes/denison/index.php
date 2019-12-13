@@ -27,11 +27,11 @@
 						</div>
 						<nav>
 							<ul>
-								<li><a href="#about">Sobre</a></li>
 								<!-- <li><a href="items/browse">Itens</a></li> -->
 								<li><a href="collections/browse">Coleções</a></li>
 								<!-- <li><a href="iiif-items/tree">Catálogo</a></li> -->
-								<li><a href="#search">Buscar</a></li>                    
+								<li><a href="#search">Buscar</a></li>
+								<li><a href="#about">Sobre</a></li>                    
 							</ul>
 						</nav>
 					</header>
