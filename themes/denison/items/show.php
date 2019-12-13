@@ -45,9 +45,15 @@
   }
 ?>
 <div class="container item">
-  <div class="section-header col-md-8 col-md-offset-2">
+  <div class="section-header col-md-8 col-md-offset-2">    
     <small>-OBRA-</small>
     <h1><?php echo $title ?></h1>
+    <?php if (metadata('item', 'Collection Name')): ?>
+      <br/>
+      <small style="font-size:10px">-COLEÇÃO-</small>
+      <h4><?php echo link_to_collection_for_item(); ?></h4>
+    <?php endif; ?>  
+
   </div><!-- end of section-header -->
 
   <?php 
@@ -101,13 +107,6 @@
         <div class="element-text"><?php //echo metadata('item', 'citation', array('no_escape' => true)); ?></div>
     </div>
     -->
-
-    <?php if (metadata('item', 'Collection Name')): ?>
-      <div id="collection" class="element">
-          <h3><?php echo __('Collection'); ?></h3>
-          <div class="element-text"><p><?php echo link_to_collection_for_item(); ?></p></div>
-      </div>
-    <?php endif; ?>
 
     <!-- The following prints a list of all tags associated with the item -->
     <?php if (metadata('item', 'has tags')): ?>
