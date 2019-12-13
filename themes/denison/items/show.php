@@ -56,7 +56,7 @@
         echo __('<div class="multi-item-files col-lg-8 col-lg-offset-2 col-md-12">');
         echo files_for_item(array('imageSize' => 'square_thumbnail'), array('class' => 'item-file col-md-6'));
       } else {
-        echo __('<div class="single-item-files col-lg-12 col-md-12">');
+        echo __('<div class="single-item-files col-lg-8 col-md-12">');
         echo files_for_item(array('imageSize' => 'fullsize'));
       }
       echo __('</div><!-- end of item-files -->'); 
@@ -64,17 +64,18 @@
   
   ?>
 
-  <div class="item-description col-lg-12">  
-    <div class="col-lg-3 col-md-3 col-sm-6 col-lg-offset-2">
+  <div class="item-description col-lg-4">  
+    <div>
       <?php 
         showItemDescriptionTag('TÍTULO', $title);
         showItemDescriptionTag('AUTOR', $agente);
         showItemDescriptionTag('DESCRIÇÃO', $descricao);
-        showItemDescriptionTag('TEXTO DE REFERÊNCIA', $textref);
+        showItemDescriptionTag('MEDIDAS', $medidas);
+        
       ?>
     </div>
     
-    <div class="col-lg-3 col-md-3 col-sm-6">
+    <div>
       <?php 
         showItemDescriptionTag('CONTEXTO CULTURAL', $contextoCultural);
         showItemDescriptionTag('ESTILO OU PERÍODO', $estiloOuPeriodo);
@@ -82,10 +83,11 @@
       ?>
     </div>
 
-    <div class="col-lg-3 col-md-3 col-sm-6">
+    <div>
       <?php 
-        showItemDescriptionTag('MEDIDAS', $medidas);
+        
         showItemDescriptionTag('LOCALIZAÇÃO', $localizacao);
+        showItemDescriptionTag('TEXTO DE REFERÊNCIA', $textref);
       ?>  
     </div>  
     
@@ -93,10 +95,12 @@
 
   <div class="col-lg-12">  
     <!-- The following prints a citation for this item. -->
+    <!--
     <div id="item-citation" class="element">
-        <h3><?php echo __('Citation'); ?></h3>
-        <div class="element-text"><?php echo metadata('item', 'citation', array('no_escape' => true)); ?></div>
+        <h3><?php //echo __('Citation'); ?></h3>
+        <div class="element-text"><?php //echo metadata('item', 'citation', array('no_escape' => true)); ?></div>
     </div>
+    -->
 
     <?php if (metadata('item', 'Collection Name')): ?>
       <div id="collection" class="element">
