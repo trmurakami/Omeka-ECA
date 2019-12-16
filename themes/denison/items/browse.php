@@ -15,15 +15,15 @@
     <button class="expand-advanced-search closed">
       <span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span>
       <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
-      ADVANCED SEARCH
+      BUSCA AVANÇADA
     </button>
     <div class="section-header col-md-10 col-md-offset-1">
-      <small>-BROWSE-</small>
-      <h1>Items <?php echo __('(%s total)', $total_results); ?></h1>
+      <!-- <small>-NAVEGAÇÃO-</small> -->
+      <h1>Obras <?php echo __('(%s)', $total_results); ?></h1>
     </div>
 
     <div class="sort-links col-md-8 col-md-offset-2">
-      <span class="sort-label">-SORT BY-</span>
+      <span class="sort-label">-ORDENAR POR-</span>
       <?php 
         echo pagination_links();
         if ($total_results > 0) {

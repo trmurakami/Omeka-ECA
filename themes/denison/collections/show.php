@@ -34,7 +34,7 @@
 
 <div class="container collection">
   <div class="section-header col-md-8 col-md-offset-2">
-    <small>-COLLECTION-</small>
+    <small>-COLEÇÃO-</small>
     <h1><?php echo $title ?></h1>
   </div><!-- end of section-header -->
   
@@ -74,9 +74,10 @@
 </div><!-- end collection-items -->
 
 <div class="container">
+  <!--
   <div class="collection-description col-lg-12">
     <div class="col-lg-2 col-md-3 col-sm-6 col-lg-offset-2">
-      <?php 
+      < ?php 
         showCollectionDescriptionTag('TITLE', $title); 
         showCollectionDescriptionTag('SUBJECT', $subject);
         showCollectionDescriptionTag('SOURCE', $source); 
@@ -84,7 +85,7 @@
     </div>
 
     <div class="col-lg-2 col-md-3 col-sm-6">
-      <?php 
+      < ?php 
         showCollectionDescriptionTag('CREATOR', $creators);
         showCollectionDescriptionTag('CONTRIBUTOR', $contributors); 
         showCollectionDescriptionTag('PUBLISHER', $publisher); 
@@ -93,7 +94,7 @@
     </div>
     
     <div class="col-lg-2 col-md-3 col-sm-6">
-      <?php 
+      < ?php 
         showCollectionDescriptionTag('TYPE', $type); 
         showCollectionDescriptionTag('FORMAT', $format);
         showCollectionDescriptionTag('LANGUAGE', $language); 
@@ -101,10 +102,11 @@
     </div>
 
     <div class="col-lg-2 col-md-3 col-sm-6">
-      <?php
+      < ?php
         showCollectionDescriptionTag('RIGHTS', $rights); 
       ?>
     </div>
+    -->
     
   </div><!-- end of collection-description -->
 </div>

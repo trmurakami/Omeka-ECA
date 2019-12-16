@@ -11,7 +11,7 @@
 <div class="container">
   <form <?php echo tag_attributes($formAttributes); ?> class="col-md-12">
     <div class="section-header col-md-10 col-md-offset-1">
-      <small>-SEARCH ITEMS-</small>
+      <small>-PESQUISAR OBRAS-</small>
       <!-- search-keywords -->
       <div id="search-keywords" class="field col-md-12">
         <?php echo $this->formLabel('keyword-search', __('')); ?>  
@@ -22,7 +22,7 @@
                                  @$_REQUEST['search'],
                                  array('id' => 'keyword-search', 
                                        'size' => '40',
-                                       'placeholder' => 'Search for Keywords'
+                                       'placeholder' => 'Pesquisar por palavras-chaves'
                                       )
                                 );
           
@@ -96,7 +96,7 @@
               </div>
           <?php endforeach; ?>
         </div>
-        <button type="button" class="add_search">Add a Field</button>
+        <button type="button" class="add_search">Adicionar um campo</button>
       </div>
     </div>
 

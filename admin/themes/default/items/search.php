@@ -1,5 +1,5 @@
 <?php
-$pageTitle = __('Search Items');
+$pageTitle = __('Pesquisar obras');
 echo head(
     array(
         'title' => $pageTitle,
