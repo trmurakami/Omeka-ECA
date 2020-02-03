@@ -59,7 +59,7 @@
   <?php 
     if (get_theme_option('Item FileGallery') == 0 && metadata('item', 'has files')) {
       if (metadata('item', 'file_count') > 1) {
-        echo __('<div class="multi-item-files col-lg-8 col-lg-offset-2 col-md-12">');
+        echo __('<div class="multi-item-files col-lg-8 col-md-12">');
         echo files_for_item(array('imageSize' => 'square_thumbnail'), array('class' => 'item-file col-md-6'));
       } else {
         echo __('<div class="single-item-files col-lg-8 col-md-12">');

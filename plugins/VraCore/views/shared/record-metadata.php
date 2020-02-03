@@ -6,7 +6,7 @@ if ($setName == 'VRA Core') {
     $class = 'element';
 }
 ?>
-<div class="element-set">
+<div class="item-description">
     <?php if ($showElementSetHeadings): ?>
     <h2><?php echo html_escape(__($setName)); ?></h2>
     <?php endif; ?>
@@ -48,10 +48,10 @@ if ($setName == 'VRA Core') {
         </div>
     <?php endif;?>
     <?php foreach ($setElements as $elementName => $elementInfo): ?>
-    <div id="<?php echo text_to_id(html_escape("$setName $elementName")); ?>" class="<?php echo $class; ?>">
-        <h3><?php echo html_escape(__($elementName)); ?></h3>
+    <div id="<?php echo text_to_id(html_escape("$setName $elementName")); ?>" class="<?php echo $class; ?> item-description-tag">
+        <h1><?php echo html_escape(__($elementName)); ?></h1>
         <?php foreach ($elementInfo['texts'] as $text): ?>
-            <div class="element-text">
+            <p>
                 <?php echo $text; ?>
                 <?php
                 fire_plugin_hook('elements_show', array(
@@ -61,7 +61,7 @@ if ($setName == 'VRA Core') {
                     )
                 );
                 ?>
-            </div>
+            </p>
         <?php endforeach; ?>
     </div>
     <?php endforeach; ?>

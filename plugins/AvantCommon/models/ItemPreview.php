@@ -29,8 +29,8 @@ class ItemPreview
 
     public function emitItemPreview($useCoverImage = true)
     {
-        $html = $this->emitItemHeader();
-        $html .= "<div>";
+        //$html = $this->emitItemHeader();
+        $html = "<div>";
         $html .= $this->emitItemThumbnail($useCoverImage);
         $html .= $this->emitItemTitle();
         $html .= "</div>";
@@ -74,6 +74,7 @@ class ItemPreview
 
         // Emit the HTML for the actual thumbnail, an external thumbnail, or a fallback thumbnail image.
         $imgTag = "<img src='$thumbnailUrl'>";
+        $url = url("items/show/{$this->item->id}");
 
         if (empty($originalImageUrl))
         {
@@ -91,7 +92,7 @@ class ItemPreview
             // Include the image in the lightbox by simply attaching the 'lightbox' class to the enclosing <a> tag.
             // Also provide the lightbox with a link to the original image and the image's item Id which jQuery will
             // expand into a link to the item.
-            $html = "<a class='lightbox' href='$originalImageUrl' title='$title' itemId='{$this->item->id}'>$imgTag</a>";
+            $html = "<a class='lightbox' href='$url' title='$title' itemId='{$this->item->id}'>$imgTag</a>";
         }
 
         // Give another plugin a chance to add to the class for installation-specific custom styling.
