@@ -32,6 +32,7 @@
   $descricao = metadata('item', array('VRA Core', 'Descrição'));
   $textref = metadata('item', array('VRA Core', 'Textref'));
   $assunto = metadata('item', array('VRA Core', 'Subject'));
+  $tipodetrabalho = metadata('item', array('VRA Core','Tipo de Trabalho'));
 
   function showItemDescriptionTag($tagName, $tagVal) {
     echo __('<div class="item-description-tag">');
@@ -45,8 +46,8 @@
   }
 ?>
 <div class="container item">
-  <div class="section-header col-md-8 col-md-offset-2">    
-    <small>-OBRA-</small>
+  <div class="section-header col-md-8 col-md-offset-2">
+    <small><?php echo $tipodetrabalho ?></small>
     <h1><?php echo $title ?></h1>
     <?php if (metadata('item', 'Collection Name')): ?>
       <br/>
