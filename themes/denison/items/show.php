@@ -33,6 +33,8 @@
   $textref = metadata('item', array('VRA Core', 'Textref'));
   $assunto = metadata('item', array('VRA Core', 'Subject'));
   $tipodetrabalho = metadata('item', array('VRA Core','Tipo de Trabalho'));
+  $material = metadata('item', array('VRA Core','Material'));
+  $tecnica = metadata('item', array('VRA Core','Técnica'));
 
   function showItemDescriptionTag($tagName, $tagVal) {
     echo __('<div class="item-description-tag">');
@@ -78,6 +80,7 @@
         showItemDescriptionTag('AUTOR', $agente);
         showItemDescriptionTag('DESCRIÇÃO', $descricao);
         showItemDescriptionTag('MEDIDAS', $medidas);
+        showItemDescriptionTag('TIPO DE TRABALHO', $tipodetrabalho);
         
       ?>
     </div>
@@ -87,6 +90,8 @@
         showItemDescriptionTag('CONTEXTO CULTURAL', $contextoCultural);
         showItemDescriptionTag('ESTILO OU PERÍODO', $estiloOuPeriodo);
         showItemDescriptionTag('ASSUNTOS', $assunto);
+        showItemDescriptionTag('MATERIAL', $material);
+        showItemDescriptionTag('TÉCNICA', $tecnica);
       ?>
     </div>
 
