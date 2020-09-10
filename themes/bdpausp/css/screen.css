@@ -331,8 +331,8 @@ article p#simple-pages-breadcrumbs {
     width: 100%;
     height: 100%;
     position: relative;
-    top: 33%;
-    left: 50%;
+    /*top: 33%;
+    left: 50%;*/
     max-width: 100%;
     /*transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
