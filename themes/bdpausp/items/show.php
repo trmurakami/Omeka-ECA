@@ -78,9 +78,10 @@
     <?php echo all_element_texts('item'); ?>
   </div>
 
+  <!--
   <div class="item-description col-lg-4">
     <div>
-      <?php 
+      < ?php 
         showItemDescriptionTag('TÍTULO', $title);
         showItemDescriptionTag('AUTOR', $agente);
         showItemDescriptionTag('DESCRIÇÃO', $descricao);
@@ -91,7 +92,7 @@
     </div>
     
     <div>
-      <?php 
+      < ?php 
         showItemDescriptionTag('CONTEXTO CULTURAL', $contextoCultural);
         showItemDescriptionTag('ESTILO OU PERÍODO', $estiloOuPeriodo);
         showItemDescriptionTag('ASSUNTOS', $assunto);
@@ -101,7 +102,7 @@
     </div>
 
     <div>
-      <?php 
+      < ?php 
         
         showItemDescriptionTag('LOCALIZAÇÃO', $localizacao);
         showItemDescriptionTag('TEXTO DE REFERÊNCIA', $textref);
@@ -109,6 +110,7 @@
     </div>  
     
   </div>
+  -->
 
   <div class="col-lg-12">  
     <!-- The following prints a citation for this item. -->
