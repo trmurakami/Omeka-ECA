@@ -74,11 +74,11 @@
   ?>
 
   <!-- Items metadata -->
-  <div id="item-metadata">
+  <div id="item-metadata" class="item-description col-lg-4">
     <?php echo all_element_texts('item'); ?>
   </div>
 
-  <div class="item-description col-lg-4">  
+  <div class="item-description col-lg-4">
     <div>
       <?php 
         showItemDescriptionTag('TÍTULO', $title);
