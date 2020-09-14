@@ -73,6 +73,11 @@
   
   ?>
 
+  <!-- Items metadata -->
+  <div id="item-metadata">
+    <?php echo all_element_texts('item'); ?>
+  </div>
+
   <div class="item-description col-lg-4">  
     <div>
       <?php 
