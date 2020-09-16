@@ -83,6 +83,17 @@ class IiifItems_IiifUtil {
                     );
                 }
             }
+            if (!empty($elements['VRA Core'])) {
+                if (!isset($jsonData['metadata'])) {
+                    $jsonData['metadata'] = array();
+                }
+                foreach ($elements['VRA Core'] as $elementName => $elementContent) {
+                    $jsonData['metadata'][] = array(
+                        'label' => $elementName,
+                        'value' => join($elementContent, '<br>')
+                    );
+                }
+            }
         }
     }
     
