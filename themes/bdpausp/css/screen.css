@@ -365,10 +365,10 @@ article p#simple-pages-breadcrumbs {
   .article-description-tag a, .item-description-tag a, .collection-description-tag a {
     text-decoration: none !important;
     display: inline-block;
-    color: white;
+    /*color: white;
     background-color: #C33244;
     padding: 3px 5px;
-    margin: 3px;
+    margin: 3px;*/
     font-size: 0.8em;
     letter-spacing: 0.1em; }
     .article-description-tag a:hover, .item-description-tag a:hover, .collection-description-tag a:hover {
