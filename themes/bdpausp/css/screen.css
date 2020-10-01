@@ -330,7 +330,7 @@ article p#simple-pages-breadcrumbs {
   .single-item-files div[class*="image-"] img, .single-item-files div[class="application-pdf"] img {
     object-fit: contain;
     width: 100%;
-    height: auto;
+    height: 100%;
     position: relative;
     /*top: 33%;
     left: 50%;*/
