@@ -330,7 +330,8 @@ class Omeka_View_Helper_FileMarkup extends Zend_View_Helper_Abstract
                 'href' => $file->getWebPath($derivative)
                 );
             $linkAttributes = array_merge($defaultLinkAttributes, $linkAttributes);
-            $html = '<a ' . tag_attributes($linkAttributes) . '>' . $html . '</a>';
+            //$html = '<a ' . tag_attributes($linkAttributes) . '>' . $html . '</a>';
+            $html = ''. $html . '';
         }
         return $html;
     }
